@@ -1,0 +1,32 @@
+{
+  "name": "vanguard-sterling-advisory",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "ng build",
+    "dev": "node scripts/dev-local.mjs",
+    "dev:angular": "ng serve",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.api.json"
+  },
+  "dependencies": {
+    "@angular/common": "^22.3.0",
+    "@angular/compiler": "^22.3.0",
+    "@angular/core": "^22.3.0",
+    "@angular/forms": "^22.3.0",
+    "@angular/platform-browser": "^22.3.0",
+    "@angular/router": "^22.3.0",
+    "@supabase/supabase-js": "^2.119.2",
+    "rxjs": "^7.8.2",
+    "tslib": "^2.8.1",
+    "zone.js": "^0.15.1"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.3.0",
+    "@angular/cli": "^22.3.0",
+    "@angular/compiler-cli": "^22.3.0",
+    "@types/node": "^24.10.0",
+    "@vercel/node": "^32.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "~6.0.0"
+  }
+}

@@ -1,0 +1,186 @@
+@if (!sessionChecked) {
+  <main class="admin-loading">
+    <span class="admin-spinner" aria-hidden="true"></span>
+    <p>Verifying administrator session…</p>
+  </main>
+} @else if (!authenticated) {
+  <main class="admin-login">
+    <a class="admin-login-brand" routerLink="/" aria-label="Return to Vanguard &amp; Sterling">
+      <img src="/images/Logo-1.png" alt="Vanguard &amp; Sterling Advisory">
+    </a>
+    <section class="admin-login-card" aria-labelledby="admin-login-title">
+      <span class="admin-eyebrow">Secure access</span>
+      <h1 id="admin-login-title">Administrator sign in</h1>
+      <p>Sign in with an administrator account to manage the advisory website.</p>
+      @if (errorMessage) {
+        <div class="admin-alert admin-alert-error" role="alert">{{ errorMessage }}</div>
+      }
+      <form (ngSubmit)="login()">
+        <label for="adminEmail">Email address</label>
+        <input id="adminEmail" name="email" type="email" autocomplete="username" required
+          [(ngModel)]="email" placeholder="name@company.com">
+        <label for="adminPassword">Password</label>
+        <input id="adminPassword" name="password" type="password" autocomplete="current-password" required
+          [(ngModel)]="password" placeholder="Enter your password">
+        <button class="admin-primary-button" type="submit" [disabled]="loginPending || !email || !password">
+          {{ loginPending ? 'Signing in…' : 'Sign in securely' }}
+        </button>
+      </form>
+      <a class="admin-back-link" routerLink="/">← Return to the website</a>
+    </section>
+    <p class="admin-login-footnote">Administrator accounts are provisioned by your Supabase project owner.</p>
+  </main>
+} @else {
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <a class="admin-sidebar-brand" routerLink="/" aria-label="Vanguard &amp; Sterling home">
+        <img src="/images/Logo-1.png" alt="Vanguard &amp; Sterling">
+      </a>
+      <div class="admin-sidebar-label">CONTENT MANAGEMENT</div>
+      <nav class="admin-resource-nav" aria-label="Admin resources">
+        @for (resource of resources; track resource.key) {
+          <button type="button" class="admin-resource-link"
+            [class.active]="selectedResource.key === resource.key"
+            (click)="selectResource(resource)">
+            <span class="admin-resource-dot" aria-hidden="true"></span>
+            <span>{{ resource.label }}</span>
+            @if (resource.key === 'contact_messages' || resource.key === 'consultation_requests') {
+              <span class="admin-inbox-tag">Inbox</span>
+            }
+          </button>
+        }
+      </nav>
+      <a class="admin-view-site" routerLink="/">↗ View public website</a>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-eyebrow">Vanguard &amp; Sterling Advisory</span>
+          <h1>Content dashboard</h1>
+        </div>
+        <div class="admin-user-actions">
+          <span class="admin-user-email">{{ adminEmail }}</span>
+          <button type="button" class="admin-logout-button" (click)="logout()">Sign out</button>
+        </div>
+      </header>
+
+      <section class="admin-content" aria-labelledby="resource-heading">
+        <div class="admin-resource-heading">
+          <div>
+            <h2 id="resource-heading">{{ selectedResource.label }}</h2>
+            <p>Manage {{ selectedResource.label.toLowerCase() }} shown across your website.</p>
+          </div>
+          <button type="button" class="admin-primary-button admin-create-button" (click)="createRecord()">
+            <span aria-hidden="true">+</span> Add {{ selectedResource.singular }}
+          </button>
+        </div>
+
+        @if (errorMessage) {
+          <div class="admin-alert admin-alert-error" role="alert">{{ errorMessage }}</div>
+        }
+        @if (successMessage) {
+          <div class="admin-alert admin-alert-success" role="status">{{ successMessage }}</div>
+        }
+
+        <div class="admin-table-toolbar">
+          <label for="adminSearch">Search this section</label>
+          <input id="adminSearch" type="search" [(ngModel)]="searchTerm"
+            placeholder="Search records…" [ngModelOptions]="{standalone: true}">
+          <span>{{ filteredRows().length }} records</span>
+        </div>
+
+        <div class="admin-table-wrap">
+          @if (loadingRows) {
+            <div class="admin-table-state"><span class="admin-spinner" aria-hidden="true"></span> Loading records…</div>
+          } @else if (filteredRows().length === 0) {
+            <div class="admin-table-state">No records found. Add your first {{ selectedResource.singular.toLowerCase() }}.</div>
+          } @else {
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  @for (column of selectedResource.columns; track column) {
+                    <th scope="col">{{ column.replaceAll('_', ' ') }}</th>
+                  }
+                  <th scope="col" class="admin-actions-heading">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (row of filteredRows(); track trackById($index, row)) {
+                  <tr>
+                    @for (column of selectedResource.columns; track column) {
+                      <td><span class="admin-cell-value">{{ displayValue(row[column]) }}</span></td>
+                    }
+                    <td class="admin-row-actions">
+                      <button type="button" class="admin-edit-button" (click)="editRecord(row)">Edit</button>
+                      <button type="button" class="admin-delete-button" (click)="deleteRecord(row)">Delete</button>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          }
+        </div>
+      </section>
+    </main>
+  </div>
+}
+
+@if (editorOpen) {
+  <div class="admin-editor-backdrop" (click)="closeEditor()">
+    <section class="admin-editor" role="dialog" aria-modal="true"
+      [attr.aria-label]="(editingId ? 'Edit ' : 'Add ') + selectedResource.singular"
+      (click)="$event.stopPropagation()">
+      <header class="admin-editor-header">
+        <div>
+          <span class="admin-eyebrow">{{ editingId ? 'Update record' : 'New record' }}</span>
+          <h2>{{ editingId ? 'Edit ' : 'Add ' }}{{ selectedResource.singular }}</h2>
+        </div>
+        <button type="button" class="admin-editor-close" aria-label="Close editor" (click)="closeEditor()">×</button>
+      </header>
+      @if (errorMessage) {
+        <div class="admin-alert admin-alert-error" role="alert">{{ errorMessage }}</div>
+      }
+      <form class="admin-editor-form" (ngSubmit)="saveRecord()">
+        @for (field of selectedResource.fields; track field.key) {
+          <div class="admin-form-field" [class.admin-form-field-wide]="field.type === 'textarea' || field.type === 'json'">
+            @if (field.type === 'checkbox') {
+              <label class="admin-checkbox-label">
+                <input type="checkbox" [checked]="formValue(field) === true"
+                  (change)="updateCheckbox(field.key, $event)">
+                <span>{{ field.label }}</span>
+              </label>
+            } @else {
+              <label [for]="'field-' + field.key">
+                {{ field.label }} @if (field.required) { <span aria-hidden="true">*</span> }
+              </label>
+              @if (field.type === 'textarea' || field.type === 'json') {
+                <textarea [id]="'field-' + field.key" [required]="field.required ?? false"
+                  [value]="formValue(field)" (input)="updateTextField(field.key, $event)"
+                  [rows]="field.type === 'json' ? 8 : 4"></textarea>
+              } @else if (field.type === 'select') {
+                <select [id]="'field-' + field.key" [value]="formValue(field)"
+                  (change)="updateTextField(field.key, $event)">
+                  @for (option of field.options ?? []; track option) {
+                    <option [value]="option">{{ option.replaceAll('_', ' ') }}</option>
+                  }
+                </select>
+              } @else {
+                <input [id]="'field-' + field.key" [type]="field.type"
+                  [required]="field.required ?? false" [value]="formValue(field)"
+                  (input)="updateTextField(field.key, $event)">
+              }
+              @if (field.help) { <small>{{ field.help }}</small> }
+            }
+          </div>
+        }
+        <footer class="admin-editor-actions">
+          <button type="button" class="admin-cancel-button" (click)="closeEditor()">Cancel</button>
+          <button type="submit" class="admin-primary-button" [disabled]="saving">
+            {{ saving ? 'Saving…' : 'Save changes' }}
+          </button>
+        </footer>
+      </form>
+    </section>
+  </div>
+}

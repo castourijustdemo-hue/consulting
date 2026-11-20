@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "preserve",
+    "types": ["node"],
+    "outDir": "./dist/api",
+    "noEmit": true
+  },
+  "include": ["api/**/*.ts", "scripts/**/*.ts"]
+}

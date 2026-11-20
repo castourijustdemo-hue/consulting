@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulting & Professional Services</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo-mark.svg" />
+  <meta name="description"
+    content="Vanguard & Sterling Advisory (V&S Global) delivers strategic business consulting, trusted legal advisory, and comprehensive HR solutions to help organizations grow, transform, and succeed." />
+
+  <!-- Editorial Serif & Clean Geometric Sans-Serif Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Custom Desktop Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" aria-label="Vanguard & Sterling Advisory Home">
+        <img class="brand-mark" src="images/Logo-1.png" alt="" aria-hidden="true" width="232" height="52" />
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active" data-nav="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-nav="about">About Us</a></li>
+          <li class="nav-item-dropdown" id="servicesDropdown">
+            <a href="#services" class="nav-link" data-nav="services" aria-expanded="false" aria-haspopup="true">
+              Services
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="mega-menu" role="menu">
+              <div class="mega-grid">
+                <a href="#services" class="mega-card" data-select-service="business">
+                  <div class="mega-card-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 3v18h18" />
+                      <path d="M18 9l-5 5-4-4-3 3" />
+                    </svg>
+                  </div>
+                  <h4>Business Consulting</h4>
+                  <p>Corporate strategy, financial planning, digital transformation &amp; operational excellence.</p>
+                  <span class="mega-card-link">Explore Practice &rarr;</span>
+                </a>
+                <a href="#services" class="mega-card" data-select-service="legal">
+                  <div class="mega-card-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 3v18" />
+                      <path d="M5 7h14" />
+                      <path d="M3 13l2-6 2 6a2.5 2.5 0 0 1-4 0z" />
+                      <path d="M17 13l2-6 2 6a2.5 2.5 0 0 1-4 0z" />
+                    </svg>
+                  </div>
+                  <h4>Legal Services</h4>
+                  <p>Corporate legal advisory, compliance, contract governance, IP &amp; risk mitigation.</p>
+                  <span class="mega-card-link">Explore Practice &rarr;</span>
+                </a>
+                <a href="#services" class="mega-card" data-select-service="hr">
+                  <div class="mega-card-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  </div>
+                  <h4>HR Consulting</h4>
+                  <p>Executive talent acquisition, leadership development, workforce &amp; rewards strategy.</p>
+                  <span class="mega-card-link">Explore Practice &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li><a href="#industries" class="nav-link" data-nav="industries">Industries</a></li>
+          <li><a href="#team" class="nav-link" data-nav="team">Our Team</a></li>
+          <li><a href="#cases" class="nav-link" data-nav="cases">Case Studies</a></li>
+          <li><a href="#insights" class="nav-link" data-nav="insights">Insights</a></li>
+          <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark or light theme" title="Switch Theme">
+          <svg id="themeIconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" style="display:none;">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+          <svg id="themeIconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button class="btn btn-gold nav-cta-btn" data-open-consultation>Schedule a Consultation</button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+      <li>
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <div class="mobile-sublinks">
+          <a href="#services" data-select-service="business">&bull; Business Consulting</a>
+          <a href="#services" data-select-service="legal">&bull; Legal Services</a>
+          <a href="#services" data-select-service="hr">&bull; HR Consulting</a>
+        </div>
+      </li>
+      <li><a href="#industries" class="mobile-nav-link">Industries</a></li>
+      <li><a href="#team" class="mobile-nav-link">Our Team</a></li>
+      <li><a href="#cases" class="mobile-nav-link">Case Studies</a></li>
+      <li><a href="#insights" class="mobile-nav-link">Insights</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div style="margin-top:2rem;">
+      <button class="btn btn-gold" style="width:100%;" data-open-consultation>Schedule a Consultation</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         SECTION 01 — HERO
+         ====================================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg-art" aria-hidden="true">
+        <div class="hero-grid-overlay"></div>
+        <!-- Hero Background Video: Architectural Skyline -->
+        <video class="hero-bg-video hero-architectural-svg" autoplay muted loop playsinline preload="auto"
+          aria-hidden="true">
+          <source src="images/hero-architecture.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-bg-gradient"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">YOUR TRUSTED PROFESSIONAL PARTNER</div>
+          <h1 class="hero-title">Building Stronger Businesses Through <span>Expert Guidance.</span></h1>
+          <p class="hero-desc">
+            We deliver strategic business consulting, trusted legal advisory and comprehensive HR solutions to help
+            organizations grow, transform and succeed.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#services" class="btn btn-gold">
+              Explore Our Services
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <button class="btn btn-outline-light" data-open-consultation>
+              Schedule a Consultation
+            </button>
+          </div>
+          <!-- <div class="hero-trust-strip">
+            <div class="hero-trust-item">
+              <strong>25+ Years</strong>
+              <span>Global Advisory Heritage</span>
+            </div>
+            <div class="hero-trust-item">
+              <strong>98.4%</strong>
+              <span>Client Retention Benchmark</span>
+            </div>
+            <div class="hero-trust-item">
+              <strong>3 Practices</strong>
+              <span>Integrated Strategy, Law &amp; People</span>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="hero-banner">
+          <div class="hero-banner-glow" aria-hidden="true"></div>
+          <img src="images/top-img-banner.png" alt="Consulting and Professional Services Advisory" class="hero-banner-img" width="870" height="862" />
+        </div>
+      </div>
+
+      <a href="#partners" class="scroll-indicator" aria-label="Scroll to Trusted Partners">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 02 — TRUSTED PARTNERS MARQUEE
+         ====================================================================== -->
+    <section class="partners-section" id="partners" aria-label="Trusted Partners and Clients">
+      <div class="container">
+        <p class="partners-label">Trusted by Enterprise Leaders, Financial Institutions &amp; High-Growth Innovators</p>
+      </div>
+      <div class="marquee-wrapper">
+        <div class="marquee-track" id="partnerMarquee">
+          <!-- Set 1 -->
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+            </svg>
+            AURELIA CAPITAL BANK
+          </div>
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3.6 9h16.8M3.6 15h16.8" />
+            </svg>
+            NORDIK GLOBAL LOGISTICS
+          </div>
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M12 2v20M2 12h20" />
+            </svg>
+            HELIOS MEDTECH GROUP
+          </div>
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <path d="M8 12h8M12 8v8" />
+            </svg>
+            MERIDIAN CLOUD SYSTEMS
+          </div>
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M3 20h18L12 4z" />
+            </svg>
+            APEX HEAVY INDUSTRIES
+          </div>
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
+            OXBRIDGE ACADEMIC TRUST
+          </div>
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            </svg>
+            SOVEREIGN ESTATES REIT
+          </div>
+          <div class="partner-logo-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83" />
+            </svg>
+            VERDANT ENERGY HOLDINGS
+          </div>
+          <!-- Duplicate Set for Seamless Loop -->
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+            </svg>
+            AURELIA CAPITAL BANK
+          </div>
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3.6 9h16.8M3.6 15h16.8" />
+            </svg>
+            NORDIK GLOBAL LOGISTICS
+          </div>
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M12 2v20M2 12h20" />
+            </svg>
+            HELIOS MEDTECH GROUP
+          </div>
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <path d="M8 12h8M12 8v8" />
+            </svg>
+            MERIDIAN CLOUD SYSTEMS
+          </div>
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M3 20h18L12 4z" />
+            </svg>
+            APEX HEAVY INDUSTRIES
+          </div>
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
+            OXBRIDGE ACADEMIC TRUST
+          </div>
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            </svg>
+            SOVEREIGN ESTATES REIT
+          </div>
+          <div class="partner-logo-item" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83" />
+            </svg>
+            VERDANT ENERGY HOLDINGS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 03 — ABOUT US
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-visual-frame reveal" data-parallax>
+          <!-- Bespoke Executive Boardroom Visual Composition -->
+          <img src="images/about-boardroom.png" alt="Executive strategy boardroom illustration" loading="lazy" />
+          <div class="about-badge-card">
+            <strong>ISO 27001 &amp; SOC2</strong>
+            <span>Certified Advisory Governance &amp; Client Data Confidentiality</span>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow">About Vanguard &amp; Sterling</span>
+          <h2 class="section-title">Expertise That Moves Your Business Forward.</h2>
+          <p class="section-subtitle" style="margin-bottom:1.1rem;">
+            We are a multidisciplinary professional services firm committed to helping businesses navigate challenges,
+            unlock opportunities and achieve sustainable growth.
+          </p>
+          <p style="font-size:0.95rem; color:var(--text-secondary);">
+            Founded on the conviction that commercial strategy, regulatory certainty, and human capital performance are
+            inseparable, Vanguard &amp; Sterling unites senior management consultants, corporate legal counsel, and
+            organizational psychologists under one cohesive partnership.
+          </p>
+
+          <div class="mv-grid">
+            <div class="mv-card">
+              <h3>Our Mission</h3>
+              <p>To empower enterprises with actionable strategy, resilient legal architecture, and high-performing
+                leadership teams.</p>
+            </div>
+            <div class="mv-card">
+              <h3>Our Vision</h3>
+              <p>To set the international benchmark for integrated, ethical, and high-impact corporate advisory
+                services.</p>
+            </div>
+          </div>
+
+          <!-- <div class="values-pills" aria-label="Core Values">
+            <span class="value-pill">Uncompromising Integrity</span>
+            <span class="value-pill">Analytical Rigor</span>
+            <span class="value-pill">Client-First Stewardship</span>
+            <span class="value-pill">Cross-Disciplinary Agility</span>
+          </div> -->
+
+          <div class="about-counters">
+            <div class="counter-box">
+              <strong class="counter" data-target="25" data-suffix="+">0</strong>
+              <span>Years of Experience</span>
+            </div>
+            <div class="counter-box">
+              <strong class="counter" data-target="1450" data-suffix="+">0</strong>
+              <span>Successful Projects</span>
+            </div>
+            <div class="counter-box">
+              <strong class="counter" data-target="620" data-suffix="+">0</strong>
+              <span>Clients Served</span>
+            </div>
+            <div class="counter-box">
+              <strong class="counter" data-target="85" data-suffix="+">0</strong>
+              <span>Professional Experts</span>
+            </div>
+          </div>
+
+          <a href="#why-us" class="btn btn-gold">Discover Our Company</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 04 — OUR CORE SERVICES
+         ====================================================================== -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <span class="eyebrow">Integrated Advisory Practices</span>
+          <h2 class="section-title">Our Core Services</h2>
+          <p class="section-subtitle">
+            Three specialized disciplines working in concert to safeguard compliance, accelerate expansion, and elevate
+            organizational capability.
+          </p>
+        </div>
+
+        <!-- Interactive Service Spotlight Tabs (Optional / Hidden to match clean slider design) -->
+        <div class="service-tabs reveal" role="tablist" aria-label="Filter Core Service Practice" style="display: none;">
+          <button class="service-tab-btn active" data-service-filter="all" role="tab" aria-selected="true">All Practices
+            (3)</button>
+          <button class="service-tab-btn" data-service-filter="business" role="tab" aria-selected="false">Business
+            Consulting</button>
+          <button class="service-tab-btn" data-service-filter="legal" role="tab" aria-selected="false">Legal
+            Services</button>
+          <button class="service-tab-btn" data-service-filter="hr" role="tab" aria-selected="false">HR
+            Consulting</button>
+        </div>
+
+        <!-- Services Carousel Slider (Continuous Loop & Controls) -->
+        <div class="services-slider-wrapper reveal" id="servicesSliderWrapper">
+          <button class="services-arrow prev" id="servicesPrevBtn" aria-label="Previous service slide" title="Previous Slide">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          <div class="services-slider-viewport" id="servicesViewport">
+            <div class="services-slider-track" id="servicesTrack">
+              <!-- SLIDE 01 — BUSINESS CONSULTING -->
+              <article class="service-slide-card" data-service-card="business" data-service-detail="business" role="group" aria-label="Business Consulting Practice">
+                <div class="service-card-thumb-wrap">
+                  <img src="images/service-1.png" alt="Business Consulting Practice" class="service-card-thumb" loading="lazy" />
+                </div>
+                <div class="service-card-info">
+                  <h3 class="service-card-heading">Business Consulting</h3>
+                  <p class="service-card-summary">
+                    Strategic insights and practical solutions that strengthen business performance and create sustainable opportunities.
+                  </p>
+                  <div class="service-card-bullets">
+                    <ul class="service-bullet-col">
+                      <li>Business Strategy &amp; Planning</li>
+                      <li>Corporate Advisory</li>
+                      <li>Business Development</li>
+                      <li>Management Consulting</li>
+                    </ul>
+                    <ul class="service-bullet-col">
+                      <li>Financial Planning</li>
+                      <li>Risk Management</li>
+                      <li>Digital Transformation</li>
+                      <li>Operational Excellence</li>
+                    </ul>
+                  </div>
+                  <button class="service-card-link" data-service-detail="business" aria-label="Explore Business Consulting Details">
+                    Explore More <span>&rarr;</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- SLIDE 02 — LEGAL SERVICES -->
+              <article class="service-slide-card" data-service-card="legal" data-service-detail="legal" role="group" aria-label="Legal Services Practice">
+                <div class="service-card-thumb-wrap">
+                  <img src="images/service-2.png" alt="Legal Services Practice" class="service-card-thumb" loading="lazy" />
+                </div>
+                <div class="service-card-info">
+                  <h3 class="service-card-heading">Legal Services</h3>
+                  <p class="service-card-summary">
+                    Professional legal guidance and corporate advisory services designed to protect business interests and support compliance.
+                  </p>
+                  <div class="service-card-bullets">
+                    <ul class="service-bullet-col">
+                      <li>Corporate Legal Advisory</li>
+                      <li>Business Registration Support</li>
+                      <li>Contract Drafting &amp; Review</li>
+                      <li>Employment Law Advisory</li>
+                    </ul>
+                    <ul class="service-bullet-col">
+                      <li>Corporate Compliance</li>
+                      <li>Intellectual Property Advisory</li>
+                      <li>Commercial Agreements</li>
+                      <li>Legal Risk Assessment</li>
+                    </ul>
+                  </div>
+                  <button class="service-card-link" data-service-detail="legal" aria-label="Explore Legal Services Details">
+                    Explore More <span>&rarr;</span>
+                  </button>
+                </div>
+              </article>
+
+              <!-- SLIDE 03 — HR CONSULTING -->
+              <article class="service-slide-card" data-service-card="hr" data-service-detail="hr" role="group" aria-label="HR Consulting Practice">
+                <div class="service-card-thumb-wrap">
+                  <img src="images/service-3.png" alt="HR Consulting Practice" class="service-card-thumb" loading="lazy" />
+                </div>
+                <div class="service-card-info">
+                  <h3 class="service-card-heading">HR Consulting</h3>
+                  <p class="service-card-summary">
+                    People-focused solutions that help organizations attract talent, develop leadership and build high-performing teams.
+                  </p>
+                  <div class="service-card-bullets">
+                    <ul class="service-bullet-col">
+                      <li>Recruitment &amp; Talent Acquisition</li>
+                      <li>HR Strategy &amp; Planning</li>
+                      <li>Employee Engagement</li>
+                      <li>Performance Management</li>
+                    </ul>
+                    <ul class="service-bullet-col">
+                      <li>Training &amp; Development</li>
+                      <li>Workforce Planning</li>
+                      <li>Organizational Development</li>
+                      <li>Compensation &amp; Benefits Advisory</li>
+                    </ul>
+                  </div>
+                  <button class="service-card-link" data-service-detail="hr" aria-label="Explore HR Consulting Details">
+                    Explore More <span>&rarr;</span>
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <button class="services-arrow next" id="servicesNextBtn" aria-label="Next service slide" title="Next Slide">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Slider Pagination Dots -->
+        <div class="slider-dots services-dots" id="servicesDots" role="tablist" aria-label="Services carousel pagination">
+          <button class="slider-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1: Business Consulting"></button>
+          <button class="slider-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2: Legal Services"></button>
+          <button class="slider-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3: HR Consulting"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 05 — WHY CHOOSE US
+         ====================================================================== -->
+    <!-- <section class="section" id="why-us">
+      <div class="container why-grid">
+        <div class="why-visual-card reveal">
+          <span class="eyebrow" style="color:var(--gold-300);">The V&amp;S Advantage</span>
+          <h2 style="font-family:var(--font-serif); font-size:2.1rem; line-height:1.2; margin-bottom:1rem;">
+            Your Success Is Our Professional Commitment.
+          </h2>
+          <p style="font-size:0.94rem; color:rgba(255,255,255,0.8); line-height:1.7;">
+            Unlike fragmented vendors, Vanguard &amp; Sterling aligns commercial strategy, statutory protection, and
+            workforce architecture into one accountable advisory team—eliminating blind spots and accelerating
+            execution.
+          </p>
+
+          <div class="why-metrics">
+            <div class="why-metric-box">
+              <strong class="counter" data-target="98" data-suffix="%">0</strong>
+              <span>Client Satisfaction Score</span>
+            </div>
+            <div class="why-metric-box">
+              <strong class="counter" data-target="38" data-suffix="+">0</strong>
+              <span>Jurisdictions Covered</span>
+            </div>
+            <div class="why-metric-box">
+              <strong class="counter" data-target="100" data-suffix="%">0</strong>
+              <span>NDA &amp; Ethics Governance</span>
+            </div>
+            <div class="why-metric-box">
+              <strong class="counter" data-target="3" data-suffix="x">0</strong>
+              <span>Average Client ROI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <h3>Experienced Professionals</h3>
+            <p>Senior partners with decades of C-suite, legal counsel, and global HR leadership credentials.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </div>
+            <h3>Client-Centered Approach</h3>
+            <p>Every engagement is bespoke—calibrated to your corporate culture, risk appetite, and growth horizon.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg>
+            </div>
+            <h3>Integrated Business Solutions</h3>
+            <p>Seamless synergy across Strategy, Legal, and HR prevents costly friction during M&amp;A or scaling.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <h3>Strategic Thinking</h3>
+            <p>Data-backed market foresight combined with pragmatic roadmaps built for real-world execution.</p>
+          </div>
+
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h3>Confidentiality &amp; Trust</h3>
+            <p>Bank-grade information security, strict conflict-of-interest protocols, and unwavering discretion.</p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3>Results-Driven Execution</h3>
+            <p>Clear KPIs, milestone accountability, and hands-on implementation support until value is realized.</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ======================================================================
+         SECTION 06 — OUR INDUSTRIES (10 SECTORS)
+         ====================================================================== -->
+    <!-- <section class="section section-alt" id="industries">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <span class="eyebrow">Sector Specialization</span>
+          <h2 class="section-title">Industries We Serve</h2>
+          <p class="section-subtitle">
+            Deep domain fluency across ten vital economic sectors, enabling tailored regulatory, operational, and talent
+            insights.
+          </p>
+        </div>
+
+        <div class="industries-slider-wrapper reveal">
+          <button class="industries-arrow prev" id="industriesPrevBtn" aria-label="Previous industries (1-5)" title="Previous industries">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div class="industries-slider-viewport" id="industriesViewport">
+            <div class="industries-slider-track" id="industriesTrack">
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" />
+                  </svg>
+                </div>
+                <h3>Banking &amp; Financial Services</h3>
+                <p>Regulatory governance, risk modeling, fintech compliance, and executive leadership succession.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+                <h3>Healthcare &amp; Medical</h3>
+                <p>Clinical operations optimization, healthcare compliance, licensing, and specialist talent retention.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                  </svg>
+                </div>
+                <h3>Information Technology</h3>
+                <p>IP protection, SaaS scaling strategy, data privacy frameworks, and engineering workforce design.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 20h20V8l-6 4V8l-6 4V4H2v16z" />
+                  </svg>
+                </div>
+                <h3>Manufacturing</h3>
+                <p>Lean supply chains, commercial vendor contracts, industrial safety compliance, and workforce planning.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                  </svg>
+                </div>
+                <h3>Retail &amp; E-commerce</h3>
+                <p>Omnichannel transformation, consumer law compliance, brand IP defense, and peak-season HR agility.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" />
+                  </svg>
+                </div>
+                <h3>Real Estate &amp; Construction</h3>
+                <p>Joint-venture structuring, project finance advisory, construction contracts, and safety governance.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </div>
+                <h3>Education</h3>
+                <p>Institutional accreditation governance, ed-tech partnerships, faculty frameworks, and strategic growth.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
+                </div>
+                <h3>Startups &amp; SMEs</h3>
+                <p>Incorporation, Series A–C readiness, ESOP &amp; employment contracts, and scalable operating models.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                  </svg>
+                </div>
+                <h3>Hospitality</h3>
+                <p>Franchise &amp; management agreements, service excellence training, and multi-property HR systems.</p>
+              </div>
+
+              <div class="industry-card">
+                <div class="industry-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="3" width="15" height="13" />
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                  </svg>
+                </div>
+                <h3>Logistics &amp; Transportation</h3>
+                <p>Cross-border trade compliance, fleet optimization, carrier agreements, and workforce safety programs.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="industries-arrow next" id="industriesNextBtn" aria-label="Next industries (6-10)" title="Next industries">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="slider-dots industries-dots" id="industriesDots" role="tablist" aria-label="Industries pagination">
+          <button class="slider-dot active" data-slide="0" role="tab" aria-selected="true" aria-label="Industries 1 to 5"></button>
+          <button class="slider-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Industries 6 to 10"></button>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ======================================================================
+         SECTION 07 — OUR PROCESS
+         ====================================================================== -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <span class="eyebrow">Methodology</span>
+          <h2 class="section-title">A Clear Path From Challenge to Achievement.</h2>
+          <p class="section-subtitle">
+            Our disciplined four-stage engagement framework ensures clarity, transparency, and measurable value at every
+            milestone.
+          </p>
+        </div>
+
+        <div class="process-timeline" id="processTimeline">
+          <div class="process-line-bg" aria-hidden="true">
+            <div class="process-line-fill" id="processLineFill"></div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-node">01</div>
+            <div>
+              <h3>DISCOVER</h3>
+              <p>Understand your business, goals and challenges.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-delay-1">
+            <div class="process-node">02</div>
+            <div>
+              <h3>STRATEGIZE</h3>
+              <p>Develop tailored strategies and practical solutions.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-delay-2">
+            <div class="process-node">03</div>
+            <div>
+              <h3>IMPLEMENT</h3>
+              <p>Execute solutions with expert guidance and collaboration.</p>
+            </div>
+          </div>
+
+          <div class="process-step reveal reveal-delay-3">
+            <div class="process-node">04</div>
+            <div>
+              <h3>GROW</h3>
+              <p>Measure results, optimize performance and support long-term success.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 08 — CASE STUDIES
+         ====================================================================== -->
+    <section class="section section-alt" id="cases">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Proven Track Record</span>
+          <h2 class="section-title">Real Challenges. Meaningful Results.</h2>
+          <p class="section-subtitle">
+            Explore illustrative engagements demonstrating how our integrated consulting, legal, and HR teams create
+            lasting enterprise impact.
+          </p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter case studies by practice">
+          <button class="filter-btn active" data-case-filter="all">All Case Studies</button>
+          <button class="filter-btn" data-case-filter="business">Business Consulting</button>
+          <button class="filter-btn" data-case-filter="legal">Legal Services</button>
+          <button class="filter-btn" data-case-filter="hr">HR Consulting</button>
+        </div>
+
+        <div class="cases-grid" id="casesGrid">
+          <!-- Case Study 1 -->
+          <article class="case-card reveal" data-case-category="business">
+            <div class="case-visual">
+              <span class="case-sample-tag">Illustrative Case Study</span>
+              <img src="images/case-study-1.png" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+            <div class="case-body">
+              <span class="case-industry">Manufacturing &bull; Business Consulting</span>
+              <h3>Post-Merger Operational Turnaround &amp; Margin Expansion</h3>
+              <p class="case-snippet">
+                Restructured regional supply chains and financial controls for a mid-cap industrial manufacturer
+                following cross-border acquisition.
+              </p>
+              <div class="case-stats-row">
+                <div class="case-stat">
+                  <strong>+34%</strong>
+                  <span>EBITDA Margin Gain</span>
+                </div>
+                <div class="case-stat">
+                  <strong>$18.5M</strong>
+                  <span>Annualized Cost Savings</span>
+                </div>
+              </div>
+              <button class="btn btn-outline-navy" style="width:100%;" data-open-case="0">View Case Details</button>
+            </div>
+          </article>
+
+          <!-- Case Study 2 -->
+          <article class="case-card reveal reveal-delay-1" data-case-category="legal">
+            <div class="case-visual">
+              <span class="case-sample-tag">Illustrative Case Study</span>
+              <img src="images/case-study-2.png" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+            <div class="case-body">
+              <span class="case-industry">Banking &amp; FinTech &bull; Legal Services</span>
+              <h3>Multi-Jurisdiction Regulatory Licensing &amp; IP Architecture</h3>
+              <p class="case-snippet">
+                Designed corporate governance, commercial vendor frameworks, and IP ring-fencing for a digital payments
+                platform expanding into 6 markets.
+              </p>
+              <div class="case-stats-row">
+                <div class="case-stat">
+                  <strong>100%</strong>
+                  <span>Audit Approval Rate</span>
+                </div>
+                <div class="case-stat">
+                  <strong>4.5 Mos</strong>
+                  <span>Faster Market Entry</span>
+                </div>
+              </div>
+              <button class="btn btn-outline-navy" style="width:100%;" data-open-case="1">View Case Details</button>
+            </div>
+          </article>
+
+          <!-- Case Study 3 -->
+          <article class="case-card reveal reveal-delay-2" data-case-category="hr">
+            <div class="case-visual">
+              <span class="case-sample-tag">Illustrative Case Study</span>
+              <img src="images/case-study-3.png" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+            <div class="case-body">
+              <span class="case-industry">Healthcare &amp; Medical &bull; HR Consulting</span>
+              <h3>Enterprise Leadership Academy &amp; Retention Transformation</h3>
+              <p class="case-snippet">
+                Overhauled compensation benchmarks, clinical leadership pathways, and engagement programs across a
+                2,400-employee hospital network.
+              </p>
+              <div class="case-stats-row">
+                <div class="case-stat">
+                  <strong>-41%</strong>
+                  <span>Senior Attrition Drop</span>
+                </div>
+                <div class="case-stat">
+                  <strong>92%</strong>
+                  <span>Leadership Bench Readiness</span>
+                </div>
+              </div>
+              <button class="btn btn-outline-navy" style="width:100%;" data-open-case="2">View Case Details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 09 — OUR TEAM
+         ====================================================================== -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <span class="eyebrow">Leadership &amp; Partners</span>
+          <h2 class="section-title">Meet the Experts Behind Your Success.</h2>
+          <!-- <p class="section-subtitle">
+            Seasoned advisors combining international boardroom experience with hands-on technical mastery.
+          </p> -->
+        </div>
+
+        <!-- Leadership Carousel Slider (Slides 1 to 6 with loop & arrow controls) -->
+        <div class="team-slider-wrapper reveal" id="teamSliderWrapper">
+          <div class="team-slider-viewport" id="teamViewport">
+            <div class="team-slider-track" id="teamTrack">
+              <!-- Slide 1 -->
+              <article class="team-slide-card" data-slide-index="0" role="group" aria-label="Alexander Vance, MBA - Managing Director">
+                <div class="team-card-media">
+                  <img src="images/leader-1.png" alt="Alexander Vance, MBA" class="team-card-img" loading="lazy" />
+                  <a href="#contact" class="team-card-badge-btn" aria-label="Connect with Alexander Vance" title="Connect on LinkedIn / Contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </a>
+                  <div class="team-card-overlay">
+                    <span class="team-role-pill">Managing Director</span>
+                    <h3 class="team-name">Alexander Vance, MBA</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 2 -->
+              <article class="team-slide-card" data-slide-index="1" role="group" aria-label="Sophia, Sterling-Hayes - Business Consultant">
+                <div class="team-card-media">
+                  <img src="images/leader-2.png" alt="Sophia, Sterling-Hayes" class="team-card-img" loading="lazy" />
+                  <a href="#contact" class="team-card-badge-btn" aria-label="Connect with Sophia, Sterling-Hayes" title="Connect on LinkedIn / Contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </a>
+                  <div class="team-card-overlay">
+                    <span class="team-role-pill">Business Consultant</span>
+                    <h3 class="team-name">Inaya, Sterling-Hayes</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 3 -->
+              <article class="team-slide-card" data-slide-index="2" role="group" aria-label="Marcus Thorne, LL.M. - Corporate Legal Advisor">
+                <div class="team-card-media">
+                  <img src="images/leader-3.png" alt="Marcus Thorne, LL.M." class="team-card-img" loading="lazy" />
+                  <a href="#contact" class="team-card-badge-btn" aria-label="Connect with Marcus Thorne" title="Connect on LinkedIn / Contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </a>
+                  <div class="team-card-overlay">
+                    <span class="team-role-pill">Corporate Legal Advisor</span>
+                    <h3 class="team-name">Marcus Thorne, LL.M.</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 4 -->
+              <article class="team-slide-card" data-slide-index="3" role="group" aria-label="Dr. Elena, SHRM-SCP - HR Consultant">
+                <div class="team-card-media">
+                  <img src="images/leader-4.png" alt="Dr. Elena, SHRM-SCP" class="team-card-img" loading="lazy" />
+                  <a href="#contact" class="team-card-badge-btn" aria-label="Connect with Dr. Elena" title="Connect on LinkedIn / Contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </a>
+                  <div class="team-card-overlay">
+                    <span class="team-role-pill">HR Consultant</span>
+                    <h3 class="team-name">Dr. Elena, SHRM-SCP</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 5 -->
+              <article class="team-slide-card" data-slide-index="4" role="group" aria-label="Julian Mercer, CFA - Strategy Specialist">
+                <div class="team-card-media">
+                  <img src="images/leader-5.png" alt="Julian Mercer, CFA" class="team-card-img" loading="lazy" />
+                  <a href="#contact" class="team-card-badge-btn" aria-label="Connect with Julian Mercer" title="Connect on LinkedIn / Contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </a>
+                  <div class="team-card-overlay">
+                    <span class="team-role-pill">Strategy Specialist</span>
+                    <h3 class="team-name">Julian Mercer, CFA</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 6 -->
+              <article class="team-slide-card" data-slide-index="5" role="group" aria-label="Sophia Chen-Alvarez, MSc - Senior Business Analyst">
+                <div class="team-card-media">
+                  <img src="images/leader-6.png" alt="Sophia Chen-Alvarez, MSc" class="team-card-img" loading="lazy" />
+                  <a href="#contact" class="team-card-badge-btn" aria-label="Connect with Sophia Chen-Alvarez" title="Connect on LinkedIn / Contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                  </a>
+                  <div class="team-card-overlay">
+                    <span class="team-role-pill">Senior Business Analyst</span>
+                    <h3 class="team-name">Sophia Chen-Alvarez, MSc</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Bottom Center Arrows Navigation matching Leadership-1.png -->
+          <div class="team-slider-nav">
+            <button class="team-nav-arrow prev" id="teamPrevBtn" aria-label="Previous leadership team member" title="Previous Members">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button class="team-nav-arrow next" id="teamNextBtn" aria-label="Next leadership team member" title="Next Members">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 10 — CLIENT TESTIMONIALS
+         ====================================================================== -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <span class="eyebrow">Client Endorsements</span>
+          <h2 class="section-title">Trusted by Businesses. Valued by People.</h2>
+          <p class="section-subtitle">
+            Illustrative reflections from executive leaders who partner with Vanguard &amp; Sterling across strategy,
+            law, and human capital.
+          </p>
+        </div>
+
+        <div class="testimonial-slider reveal" id="testimonialSlider" role="region"
+          aria-label="Client Testimonials Carousel">
+          <div class="testimonial-track" id="testimonialTrack">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+              <blockquote class="testimonial-quote">
+                &ldquo;Vanguard &amp; Sterling guided our regional expansion with remarkable clarity. Having corporate
+                legal counsel and commercial strategists collaborating at the same table cut our execution timeline in
+                half.&rdquo;
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-meta">
+                  <div class="author-avatar">JH</div>
+                  <div>
+                    <h4>Jonathan Hargreaves (Client Placeholder)</h4>
+                    <span>Chief Executive Officer, Aurelia Capital Holdings</span>
+                  </div>
+                </div>
+                <span class="author-industry">Banking &amp; Financial Services</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+              <blockquote class="testimonial-quote">
+                &ldquo;Their HR consulting practice transformed how we attract and retain senior clinical leaders.
+                Turnover dropped dramatically within two quarters, and our leadership bench has never been
+                stronger.&rdquo;
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-meta">
+                  <div class="author-avatar">CM</div>
+                  <div>
+                    <h4>Dr. Claire Montgomery (Client Placeholder)</h4>
+                    <span>Managing Partner, Helios MedTech Group</span>
+                  </div>
+                </div>
+                <span class="author-industry">Healthcare &amp; Medical</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+              <blockquote class="testimonial-quote">
+                &ldquo;From Series B governance restructuring to enterprise IP protection and ESOP design, V&amp;S
+                Global acted as a true strategic partner rather than an external vendor.&rdquo;
+              </blockquote>
+              <div class="testimonial-author">
+                <div class="author-meta">
+                  <div class="author-avatar">RK</div>
+                  <div>
+                    <h4>Rohan Kulkarni (Client Placeholder)</h4>
+                    <span>Co-Founder &amp; COO, Meridian Cloud Systems</span>
+                  </div>
+                </div>
+                <span class="author-industry">Information Technology</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-arrow" id="prevTestimonial" aria-label="Previous testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+          <div class="slider-dots" id="testimonialDots" role="tablist" aria-label="Testimonial slides">
+            <button class="slider-dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="slider-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="slider-dot" data-slide="2" aria-label="Slide 3"></button>
+          </div>
+          <button class="slider-arrow" id="nextTestimonial" aria-label="Next testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 11 — INSIGHTS & ARTICLES
+         ====================================================================== -->
+    <section class="section" id="insights">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Thought Leadership</span>
+          <h2 class="section-title">Knowledge That Creates Opportunities.</h2>
+          <p class="section-subtitle">
+            Executive briefings, regulatory analyses, and organizational playbooks authored by our practice leaders.
+          </p>
+        </div>
+
+        <div class="insights-toolbar reveal">
+          <div class="filter-bar" style="margin-bottom:0;" role="group" aria-label="Filter articles by category">
+            <button class="filter-btn active" data-article-filter="all">All Insights</button>
+            <button class="filter-btn" data-article-filter="strategy">Business Strategy &amp; Growth</button>
+            <button class="filter-btn" data-article-filter="legal">Corporate Legal Compliance</button>
+            <button class="filter-btn" data-article-filter="hr">Human Resource Management</button>
+            <button class="filter-btn" data-article-filter="leadership">Leadership &amp; Org Development</button>
+          </div>
+
+          <div class="search-box">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <input type="search" id="articleSearchInput" placeholder="Search insights &amp; topics..."
+              aria-label="Search insights and articles" />
+          </div>
+        </div>
+
+        <div class="articles-grid" id="articlesGrid">
+          <!-- Article 1 -->
+          <article class="article-card reveal" data-article-cat="strategy">
+            <div class="article-thumb">
+              <img src="images/article-1.png" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Business Strategy &amp; Growth</span>
+                <span class="article-date">October 18, 2026 &bull; 6 Min Read</span>
+              </div>
+              <h3>Capital Allocation &amp; Resilient Growth in Volatile Markets</h3>
+              <p>How disciplined CFOs and boards balance defensive liquidity with strategic M&amp;A and digital core
+                investments.</p>
+              <button class="service-explore-btn" data-open-article="0">Read More <span>&rarr;</span></button>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card reveal reveal-delay-1" data-article-cat="legal">
+            <div class="article-thumb">
+              <img src="images/article-2.png" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Corporate Legal Compliance</span>
+                <span class="article-date">October 04, 2026 &bull; 5 Min Read</span>
+              </div>
+              <h3>Cross-Border Data Governance &amp; AI Contracting Standards</h3>
+              <p>Essential clauses, liability caps, and regulatory audit protocols every enterprise general counsel must
+                review this year.</p>
+              <button class="service-explore-btn" data-open-article="1">Read More <span>&rarr;</span></button>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card reveal reveal-delay-2" data-article-cat="hr">
+            <div class="article-thumb">
+              <img src="images/article-3.png" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Human Resource Management</span>
+                <span class="article-date">September 21, 2026 &bull; 7 Min Read</span>
+              </div>
+              <h3>Total Rewards Architecture for High-Retention Organizations</h3>
+              <p>Designing transparent performance incentives and non-monetary career pathways that outperform market
+                attrition averages.</p>
+              <button class="service-explore-btn" data-open-article="2">Read More <span>&rarr;</span></button>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="article-card reveal reveal-delay-3" data-article-cat="leadership">
+            <div class="article-thumb">
+              <img src="images/article-4.png" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+            <div class="article-body">
+              <div class="article-meta">
+                <span class="article-cat">Leadership &amp; Org Development</span>
+                <span class="article-date">September 09, 2026 &bull; 6 Min Read</span>
+              </div>
+              <h3>Building Agile C-Suite Alignment During Digital Transformation</h3>
+              <p>Eliminating departmental silos through shared governance rituals, executive coaching, and
+                outcome-driven OKRs.</p>
+              <button class="service-explore-btn" data-open-article="3">Read More <span>&rarr;</span></button>
+            </div>
+          </article>
+        </div>
+        <p id="noArticlesMsg" style="display:none; text-align:center; padding:2rem; color:var(--text-secondary);">
+          No articles match your current filter or search term. Try clearing the search box.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 12 — FAQ ACCORDION (8 EXACT QUESTIONS, SINGLE-OPEN)
+         ====================================================================== -->
+    <section class="section section-alt faq-section" id="faq">
+      <div class="container">
+        <div class="section-header centered reveal">
+          <span class="eyebrow">Advisory Clarity</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-layout-grid">
+          <!-- Left Column: Hands Holding Tablet Dashboard (matching Faq-2.png) -->
+          <div class="faq-media-col reveal">
+            <div class="faq-tablet-wrap">
+              <img src="images/faq-tablet.png" alt="Advisory Dashboard on Tablet" class="faq-tablet-img" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Right Column: 5 Numbered Accordion Cards (matching Faq-2.png) -->
+          <div class="faq-accordion-col reveal reveal-delay-1" id="faqAccordion">
+            <!-- 01 (Open by default) -->
+            <div class="faq-item open">
+              <button class="faq-question" aria-expanded="true">
+                <div class="faq-q-left">
+                  <span class="faq-num">01</span>
+                  <span class="faq-q-text">What services does your consulting company provide?</span>
+                </div>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg class="faq-icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                  <svg class="faq-icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Vanguard &amp; Sterling Advisory provides comprehensive professional services across three core
+                  practices: <strong>Business Consulting</strong> (strategy, financial planning, risk management, digital
+                  transformation, operational excellence), <strong>Legal Services</strong> (corporate legal advisory,
+                  compliance, contracts), and <strong>HR Consulting</strong> (talent acquisition, organizational strategy,
+                  leadership development).
+                </div>
+              </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <div class="faq-q-left">
+                  <span class="faq-num">02</span>
+                  <span class="faq-q-text">How can I schedule a consultation?</span>
+                </div>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg class="faq-icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                  <svg class="faq-icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  You can click any &ldquo;Schedule a Consultation&rdquo; button on this page to select your preferred
+                  practice area, date, and time window, or submit an enquiry through our Contact section. A senior
+                  practice coordinator responds within one business day to confirm your confidential discovery session.
+                </div>
+              </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <div class="faq-q-left">
+                  <span class="faq-num">03</span>
+                  <span class="faq-q-text">Do you provide customized business solutions?</span>
+                </div>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg class="faq-icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                  <svg class="faq-icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Yes. We never rely on off-the-shelf templates. Every engagement begins with our Discover phase—auditing
+                  your commercial objectives, regulatory environment, and organizational structure—to engineer a bespoke
+                  roadmap tailored specifically to your enterprise.
+                </div>
+              </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <div class="faq-q-left">
+                  <span class="faq-num">04</span>
+                  <span class="faq-q-text">Can businesses access all three consulting services?</span>
+                </div>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg class="faq-icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                  <svg class="faq-icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Absolutely. Many clients retain us for integrated multi-disciplinary mandates—such as market expansion,
+                  mergers &amp; acquisitions, or corporate restructuring—where our Business, Legal, and HR specialists
+                  work as a single unified project team.
+                </div>
+              </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <div class="faq-q-left">
+                  <span class="faq-num">05</span>
+                  <span class="faq-q-text">How do you protect client confidentiality?</span>
+                </div>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg class="faq-icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M12 5v14M5 12h14" />
+                  </svg>
+                  <svg class="faq-icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-answer">
+                <div class="faq-answer-inner">
+                  Client discretion is foundational to our firm. All discussions are protected by mutual Non-Disclosure
+                  Agreements (NDAs), strict ethical walls, encrypted document vaults, and ISO 27001-aligned information
+                  governance standards.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 14 — CONTACT US
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Direct Engagement</span>
+          <h2 class="section-title">Connect With Our Advisory Team</h2>
+          <p class="section-subtitle">
+            Reach out to discuss your strategic priorities, legal requirements, or human capital initiatives in complete
+            confidence.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Info Card -->
+          <div class="contact-info-card reveal">
+            <h3>Global Headquarters</h3>
+            <p>Private consultations available in person at our executive suites or via encrypted video conference.</p>
+
+            <div class="contact-detail-list">
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Office Address (Placeholder)</strong>
+                  <span>Level 32, Sterling Financial Tower, 100 Bishopsgate, Financial District</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Phone Number (Placeholder)</strong>
+                  <span>+1 (555) 234-8900 / +44 (0) 20 7946 0821</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Email Address (Placeholder)</strong>
+                  <span>advisory@vanguardsterling-example.com</span>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div>
+                  <strong>Business Hours</strong>
+                  <span>Monday – Friday: 08:30 AM – 06:30 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/15552348900?text=Hello%20Vanguard%20%26%20Sterling%20Advisory%2C%20I%20would%20like%20to%20inquire%20about%20consulting%20services."
+              target="_blank" rel="noopener noreferrer" class="whatsapp-direct-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" />
+              </svg>
+              Connect via WhatsApp Direct
+            </a>
+
+            <div class="social-row" aria-label="Social Media Links">
+              <a href="#contact" class="social-link-btn" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                </svg>
+              </a>
+              <a href="#contact" class="social-link-btn" aria-label="X / Twitter">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a href="#contact" class="social-link-btn" aria-label="YouTube Insights">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Contact Form -->
+          <div class="contact-form-card reveal reveal-delay-1">
+            <h3 style="font-family:var(--font-serif); font-size:1.6rem; margin-bottom:0.4rem;">Submit an Advisory
+              Enquiry</h3>
+            <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1.75rem;">
+              Complete the form below. Fields marked with * are required.
+            </p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">Full Name *</label>
+                  <input type="text" id="fullName" name="fullName" class="form-control"
+                    placeholder="e.g., Eleanor Vance" required />
+                  <span class="error-msg" id="err-fullName"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="businessEmail">Business Email *</label>
+                  <input type="email" id="businessEmail" name="businessEmail" class="form-control"
+                    placeholder="name@company.com" required />
+                  <span class="error-msg" id="err-businessEmail"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number *</label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control"
+                    placeholder="+1 (555) 000-0000" required />
+                  <span class="error-msg" id="err-phoneNumber"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="companyName">Company Name *</label>
+                  <input type="text" id="companyName" name="companyName" class="form-control"
+                    placeholder="Organization Ltd." required />
+                  <span class="error-msg" id="err-companyName"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="selectService">Select Service *</label>
+                  <select id="selectService" name="selectService" class="form-control" required>
+                    <option value="">-- Choose Advisory Practice --</option>
+                    <option value="Business Consulting">Business Consulting</option>
+                    <option value="Legal Services">Legal Services</option>
+                    <option value="HR Consulting">HR Consulting</option>
+                    <option value="General Enquiry">General Enquiry</option>
+                  </select>
+                  <span class="error-msg" id="err-selectService"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <input type="text" id="subject" name="subject" class="form-control"
+                    placeholder="Brief topic of enquiry" required />
+                  <span class="error-msg" id="err-subject"></span>
+                </div>
+
+                <div class="form-group full">
+                  <label for="message">Message *</label>
+                  <textarea id="message" name="message" rows="4" class="form-control"
+                    placeholder="Describe your objectives, timeline, or advisory requirements..." required></textarea>
+                  <span class="error-msg" id="err-message"></span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-gold" id="contactSubmitBtn" style="margin-top:0.75rem;">
+                Submit Enquiry
+              </button>
+
+              <div class="form-feedback" id="contactFeedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 13 — FULL-WIDTH CONSULTATION CTA BANNER
+         ====================================================================== -->
+    <section class="cta-banner">
+      <div class="cta-banner-bg" aria-hidden="true">
+        <img src="images/cta-banner.png" alt="" class="cta-banner-img" loading="lazy" />
+        <div class="cta-banner-overlay"></div>
+      </div>
+      <div class="container cta-banner-inner reveal">
+        <div class="cta-banner-text">
+          <span class="eyebrow" style="color:var(--gold-300);">Executive Partnership</span>
+          <h2>Let's Build Something Exceptional Together.</h2>
+          <p>
+            Connect with our professional team and discover the right solutions for your business.
+          </p>
+        </div>
+        <div class="cta-banner-actions">
+          <button class="btn btn-gold" data-open-consultation>Schedule a Consultation</button>
+          <a href="#contact" class="btn btn-outline-light">Contact Our Experts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 15 — NEWSLETTER
+         ====================================================================== -->
+    <!-- <section class="newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-box reveal">
+          <span class="eyebrow">Executive Briefing</span>
+          <h2 class="section-title">Stay Ahead With Expert Insights.</h2>
+          <p class="section-subtitle">
+            Receive monthly intelligence on corporate strategy, regulatory updates, and leadership trends directly from
+            V&amp;S Global partners.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input type="email" id="newsletterEmail" placeholder="Enter your business email address"
+              aria-label="Business email for newsletter" required />
+            <button type="submit" class="btn btn-gold">Subscribe</button>
+          </form>
+
+          <label class="newsletter-consent">
+            <input type="checkbox" id="newsletterConsent" required />
+            <span>I agree to receive executive briefings and accept the Privacy Policy.</span>
+          </label>
+          <div class="error-msg" id="newsletterError" style="margin-top:0.5rem;"></div>
+          <div class="form-feedback" id="newsletterFeedback" role="status" aria-live="polite"
+            style="max-width:540px; margin:0.85rem auto 0;"></div>
+        </div>
+      </div>
+    </section>
+  </main> -->
+
+  <!-- ========================================================================
+       SECTION 16 — MULTI-COLUMN FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 01 -->
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo" aria-label="Vanguard & Sterling Advisory">
+            <img class="brand-mark" src="images/Logo-1.png" alt="" aria-hidden="true" width="252" height="52" />
+          </a>
+          <p>
+            An international multidisciplinary consulting firm delivering strategic business advisory, corporate legal
+            counsel, and executive HR solutions with uncompromising integrity.
+          </p>
+        </div>
+
+        <!-- Column 02 -->
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#cases">Case Studies</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 03 -->
+        <div>
+          <h4>Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services" data-select-service="business">Business Consulting</a></li>
+            <li><a href="#services" data-select-service="legal">Legal Services</a></li>
+            <li><a href="#services" data-select-service="hr">HR Consulting</a></li>
+            <li><a href="#insights">Insights &amp; Briefings</a></li>
+            <li><a href="#faq">Client FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 04 -->
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact-list">
+            <li>Level 32, Sterling Financial Tower, 100 Bishopsgate (Placeholder)</li>
+            <li>Phone: +1 (555) 234-8900</li>
+            <li>Email: advisory@vanguardsterling-example.com</li>
+            <li>Hours: Mon – Fri, 08:30 AM – 06:30 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Consulting & Professional Services. All Rights
+          Reserved.</p>
+
+        <div class="footer-legal-links">
+          <button type="button" data-open-legal="privacy">Privacy Policy</button>
+          <button type="button" data-open-legal="terms">Terms &amp; Conditions</button>
+        </div>
+
+        <div class="social-row">
+          <a href="#contact" class="social-link-btn" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+          </a>
+          <a href="#contact" class="social-link-btn" aria-label="X / Twitter">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <button type="button" class="btn btn-outline-light" style="padding:0.45rem 0.9rem; font-size:0.78rem;"
+            id="footerBackToTop">
+            Back to Top &uarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MODALS (CONSULTATION MODAL & DYNAMIC CONTENT DETAIL MODAL)
+       ======================================================================== -->
+  <!-- Consultation Modal -->
+  <div class="modal-backdrop" id="consultationModal" role="dialog" aria-modal="true"
+    aria-labelledby="consultModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeConsultModal" aria-label="Close modal">&times;</button>
+      <span class="eyebrow">Executive Briefing</span>
+      <h2 id="consultModalTitle" style="font-family:var(--font-serif); font-size:1.85rem; margin-bottom:0.45rem;">
+        Schedule a Private Consultation
+      </h2>
+      <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+        Select your practice area and preferred date. A Senior Partner will confirm your confidential session.
+      </p>
+
+      <form id="consultationForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="modalName">Your Full Name *</label>
+            <input type="text" id="modalName" class="form-control" placeholder="Full Name" required />
+            <span class="error-msg" id="err-modalName"></span>
+          </div>
+          <div class="form-group">
+            <label for="modalEmail">Work Email *</label>
+            <input type="email" id="modalEmail" class="form-control" placeholder="name@company.com" required />
+            <span class="error-msg" id="err-modalEmail"></span>
+          </div>
+          <div class="form-group">
+            <label for="modalService">Advisory Practice *</label>
+            <select id="modalService" class="form-control" required>
+              <option value="Business Consulting">Business Consulting</option>
+              <option value="Legal Services">Legal Services</option>
+              <option value="HR Consulting">HR Consulting</option>
+              <option value="Integrated Multi-Practice">Integrated Multi-Practice</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="modalDate">Preferred Date *</label>
+            <input type="date" id="modalDate" class="form-control" required />
+            <span class="error-msg" id="err-modalDate"></span>
+          </div>
+          <div class="form-group full">
+            <label for="modalNotes">Brief Overview of Objectives</label>
+            <textarea id="modalNotes" rows="3" class="form-control"
+              placeholder="Optional context to help us prepare for our discussion..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%; margin-top:0.75rem;">Confirm Consultation
+          Request</button>
+        <div class="form-feedback" id="modalFeedback" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dynamic Detail Modal (Case Studies, Services, Articles, Legal Policies) -->
+  <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeDetailModal" aria-label="Close detail modal">&times;</button>
+      <div id="detailModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Cookie Consent Banner -->
+  <!-- <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie consent">
+    <p>
+      We use essential cookies to ensure optimal site performance and theme preferences. By continuing, you agree to our
+      Privacy &amp; Cookie Policy.
+    </p>
+    <div style="display:flex; gap:0.6rem;">
+      <button class="btn btn-gold" style="padding:0.55rem 1.1rem; font-size:0.8rem;" id="acceptCookies">Accept</button>
+      <button class="btn btn-outline-light" style="padding:0.55rem 0.95rem; font-size:0.8rem;"
+        id="declineCookies">Essential Only</button>
+    </div>
+  </div> -->
+
+  <!-- Floating WhatsApp & Back-to-Top Buttons -->
+  <div class="floating-widgets">
+    <button class="float-btn float-top" id="backToTopBtn" aria-label="Scroll back to top" title="Back to Top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+    <a href="https://wa.me/15552348900?text=Hello%20Vanguard%20%26%20Sterling%20Advisory" target="_blank"
+      rel="noopener noreferrer" class="float-btn float-whatsapp" aria-label="Chat on WhatsApp"
+      title="WhatsApp Advisory Desk">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       VANILLA JAVASCRIPT (ES6+) — ALL 30 INTERACTIVE FEATURES
+       ======================================================================== -->
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
