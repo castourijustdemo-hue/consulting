@@ -1,7 +1,7 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { createServiceSupabaseClient } from '../_lib/supabase';
-import { requireAdmin } from '../_lib/admin-auth';
-import { isRecord, sendMethodNotAllowed, sendServerError } from '../_lib/http';
+import { createServiceSupabaseClient } from '../_lib/supabase.js';
+import { requireAdmin } from '../_lib/admin-auth.js';
+import { isRecord, sendMethodNotAllowed, sendServerError } from '../_lib/http.js';
 
 const resources = {
   site_settings: { fields: ['key', 'value', 'label'], order: 'label' },

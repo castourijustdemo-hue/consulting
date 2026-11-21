@@ -1,6 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { createServiceSupabaseClient } from './_lib/supabase';
-import { isRecord, sendMethodNotAllowed, sendServerError } from './_lib/http';
+import { createServiceSupabaseClient } from './_lib/supabase.js';
+import { isRecord, sendMethodNotAllowed, sendServerError } from './_lib/http.js';
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const phonePattern = /^[+]?[\d\s().-]{7,24}$/;

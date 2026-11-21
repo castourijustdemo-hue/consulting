@@ -1,6 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { createServiceSupabaseClient } from './_lib/supabase';
-import { sendMethodNotAllowed, sendServerError } from './_lib/http';
+import { createServiceSupabaseClient } from './_lib/supabase.js';
+import { sendMethodNotAllowed, sendServerError } from './_lib/http.js';
 
 const publicCollections = [
   ['site_settings', 'label'],

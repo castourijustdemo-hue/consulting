@@ -1,7 +1,7 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { createPublicSupabaseClient, createServiceSupabaseClient } from './_lib/supabase';
-import { isRecord, sendMethodNotAllowed, sendServerError } from './_lib/http';
-import { requireAdmin } from './_lib/admin-auth';
+import { createPublicSupabaseClient, createServiceSupabaseClient } from './_lib/supabase.js';
+import { isRecord, sendMethodNotAllowed, sendServerError } from './_lib/http.js';
+import { requireAdmin } from './_lib/admin-auth.js';
 
 async function isAdministrator(userId: string): Promise<boolean> {
   const serviceClient = createServiceSupabaseClient();
