@@ -1,6 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { createPublicSupabaseClient, createServiceSupabaseClient } from './supabase';
-import { sendServerError } from './http';
+import { createPublicSupabaseClient, createServiceSupabaseClient } from './supabase.js';
+import { sendServerError } from './http.js';
 
 export interface AdminIdentity {
   id: string;
